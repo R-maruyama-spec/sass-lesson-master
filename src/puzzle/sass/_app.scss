@@ -1,13 +1,9 @@
 @use 'variable' as var;
 @use 'mixin' as mix;
 
-$maxWidth: 400px;
-$maxHeight: 250px;
-$mediumHeight: 100px;
-
 .header {
-  width: $maxWidth;
-  height: $mediumHeight;
+  width: var.$maxWidth;
+  height: var.$mediumHeight;
   background-color: var.$navy;
   padding: 20px;
   box-sizing: border-box; 
@@ -23,7 +19,7 @@ $mediumHeight: 100px;
     background-color: var.$white;
 
     &_box {
-      @include mix.header_boxStyle;
+      @include mix.headerBoxStyle;
     }
   }
 }
@@ -41,12 +37,12 @@ $mediumHeight: 100px;
 }
 .sidebar {
   width: 150px;
-  height: $maxHeight;
+  height: var.$maxHeight;
   background-color: var.$green;
 }
 .main {
   width: 250px;
-  height: $maxHeight;
+  height: var.$maxHeight;
   background-color: var.$red;
   padding: 40px;
   box-sizing: border-box; 
@@ -59,12 +55,12 @@ $mediumHeight: 100px;
     &_box {
       box-sizing: border-box; 
       border: 5px solid var.$white;
-      @include mix.main_boxStyle;
+      @include mix.mainBoxStyle;
     }
   }
 }
 .footer {
-  width: $maxWidth;
-  height: $mediumHeight;
+  width: var.$maxWidth;
+  height: var.$mediumHeight;
   background-color: var.$brown;
 }
